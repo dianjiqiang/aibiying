@@ -1,12 +1,24 @@
 @import url('normalize.css');
+@import url(./variables.less);
 
-@primayColor: red;
-
-body{
+body,
+h1,
+h2,
+h3,
+h4,
+ul {
   margin: 0;
   padding: 0;
 }
-h1,h2,h3,h4{
-  margin: 0;
-  padding: 0;
+a {
+  color: @textColorPrimary;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+ul,
+li {
+  list-style: none;
 }
