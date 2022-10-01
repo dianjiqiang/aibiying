@@ -1,17 +1,33 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+
+import { homeRequest } from '@/service'
+
+export const fetchHomeDataAction = createAsyncThunk('fetchdata', async () => {
+  const res = await homeRequest.getGoodPriceInfo()
+  return res
+})
 
 const homeSlice = createSlice({
   name: 'home',
   initialState: {
-    name: '爱彼迎'
+    goodPriceInfo: {},
+    isScrollTop: true
   },
   reducers: {
-    changeName(state, action) {
-      state.name = action.payload
+    changeGoodPriceInfoAction(state, action) {
+      state.goodPriceInfo = action.payload
+    },
+    setIsScrollTop(state, { payload }) {
+      state.isScrollTop = payload
+    }
+  },
+  extraReducers: {
+    [fetchHomeDataAction.fulfilled](state, { payload }) {
+      state.goodPriceInfo = payload
     }
   }
 })
 
 export default homeSlice.reducer
 
-export const { changeName } = homeSlice.actions
+export const { changeGoodPriceInfoAction, setIsScrollTop } = homeSlice.actions

@@ -1,14 +1,14 @@
 const theme = {
   color: {
-    primaryColor: "#FF385C",
-    secondaryColor: "#00848A",
-    textColor: "#484848",
-    textColorSecondary: "#222222"
+    primaryColor: '#FF385C',
+    secondaryColor: '#00848A',
+    textColor: '#484848',
+    textColorSecondary: '#222222'
   },
   fontSize: {
-    small: "12px",
-    normal: "14px",
-    large: "16px"
+    small: '12px',
+    normal: '14px',
+    large: '16px'
   },
   mixin: {
     boxShadow: `

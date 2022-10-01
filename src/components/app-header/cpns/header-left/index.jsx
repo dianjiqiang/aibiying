@@ -1,11 +1,14 @@
 import React, { memo } from 'react'
 
 import { LeftStyle } from './style'
+import IconLogo from '@/assets/svg/icon_logo.jsx'
 
 const index = memo(() => {
   return (
     <LeftStyle>
-      <div>index</div>
+      <div className="icon-logo">
+        <IconLogo></IconLogo>
+      </div>
     </LeftStyle>
   )
 })

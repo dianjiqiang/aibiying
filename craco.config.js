@@ -1,4 +1,4 @@
-const CracoLessPlugin = require('craco-less');
+const CracoLessPlugin = require('craco-less')
 const path = require('path')
 
 module.exports = {
@@ -9,16 +9,17 @@ module.exports = {
         lessLoaderOptions: {
           lessOptions: {
             modifyVars: { '@primary-color': '#1DA57A' },
-            javascriptEnabled: true,
-          },
-        },
-      },
-    },
+            javascriptEnabled: true
+          }
+        }
+      }
+    }
   ],
   //别名
-  webpack:{
-    alias:{
-      '@': path.resolve(__dirname,'src')
+  webpack: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@mui/styled-engine': '@mui/styled-engine-sc'
     }
   }
-};
+}
